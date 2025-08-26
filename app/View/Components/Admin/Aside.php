@@ -33,7 +33,13 @@ class Aside extends Component
                         "icon" => "far fa-circle",
                         "route_name" => "master-data.categories.index",
                         "route_active" => request()->routeIs('master-data.categories.*'),
-                    ]
+                    ],
+                    [
+                        "label" => "Produk",
+                        "icon" => "far fa-circle",
+                        "route_name" => "master-data.products.index",
+                        "route_active" => request()->routeIs('master-data.products.*'),
+                    ],
                     
                 ]
             ]

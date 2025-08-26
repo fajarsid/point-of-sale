@@ -1,7 +1,11 @@
 <div>
     <button type="button" class="btn {{ $id ? 'btn-warning' : 'btn-primary' }}" data-toggle="modal"
         data-target="#formCategory{{ $id ?? '' }}">
-        {{ $id ? 'Edit' : 'Tambah Kategori' }}
+        @if ($id)
+            <i class="fas fa-edit"></i>
+        @else
+            Kategori Baru
+        @endif
     </button>
 
     <div class="modal fade" id="formCategory{{ $id ?? '' }}">
@@ -20,12 +24,13 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="">Nama Kategori</label>
-                            <input type="text" class="form-control" placeholder="Nama Kategori" name="category_name" id="category_name" value="{{ $category_name ?? '' }}">
+                            <input type="text" class="form-control" placeholder="Nama Kategori" name="category_name"
+                                id="category_name" value="{{ $category_name ?? '' }}">
                         </div>
                         <div>
                             <label for="">Deskripsi</label>
-                            <textarea class="form-control" placeholder="Deskripsi" cols="30"
-                                rows="10"  name="description" id="description">{{ $description ?? '' }}</textarea>
+                            <textarea class="form-control" placeholder="Deskripsi" cols="30" rows="10" name="description"
+                                id="description">{{ $description ?? '' }}</textarea>
                         </div>
                     </div>
                     <div class="modal-footer justify-content-between">

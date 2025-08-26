@@ -36,7 +36,7 @@
                             <td>
                                 <div class="d-flex align-items-center">
                                     <x-category.form-category :id="$item->id" />
-                                        <a href="{{ route('master-data.categories.destroy', $item->id) }}" data-confirm-delete="true" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                        <a href="{{ route('master-data.categories.destroy', $item->id) }}" data-confirm-delete="true" class="btn btn-danger mx-1"><i class="fas fa-trash"></i></a>
                                 </div>
                             </td>
                         </tr>
